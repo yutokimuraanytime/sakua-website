@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社Sakua | データで、事業を強くする。</title>
+<meta name="description" content="株式会社Sakua。データとマーケティングで事業成長を支援。戦略立案から実行まで一気通貫。広告運用・データ基盤構築・開発。">
+<style>
+:root {
+  --black: #111;
+  --white: #fff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-600: #4b5563;
+  --gray-900: #111827;
+  --accent: #2563eb;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  color: var(--gray-900);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* Hero */
+.hero {
+  padding: 200px 0 100px;
+  text-align: center;
+}
+.hero .tagline {
+  font-size: 14px; font-weight: 600; color: var(--accent);
+  letter-spacing: 0.15em; text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.hero h1 {
+  font-size: 48px; font-weight: 800; line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+.hero p {
+  font-size: 17px; color: var(--gray-600);
+  max-width: 560px; margin: 0 auto 48px;
+  line-height: 1.8;
+}
+.hero .scroll-hint {
+  font-size: 12px; color: var(--gray-400);
+  letter-spacing: 0.1em;
+}
+
+/* Section Common */
+.section-label {
+  font-size: 12px; font-weight: 700; color: var(--accent);
+  letter-spacing: 0.15em; text-transform: uppercase;
+  margin-bottom: 16px; text-align: center;
+}
+.section-title {
+  text-align: center; font-size: 28px; font-weight: 700;
+  margin-bottom: 16px;
+}
+.section-sub {
+  text-align: center; font-size: 15px; color: var(--gray-600);
+  max-width: 560px; margin: 0 auto 60px;
+}
+
+/* Services - 3層構造 */
+.services { padding: 100px 0; }
+.service-layers { max-width: 900px; margin: 0 auto; }
+.service-layer {
+  display: flex; align-items: flex-start; gap: 40px;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+.service-layer:last-child { border-bottom: none; }
+.service-layer .layer-label {
+  flex: 0 0 120px;
+  font-size: 12px; font-weight: 700; color: var(--accent);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding-top: 4px;
+}
+.service-layer .layer-content { flex: 1; }
+.service-layer h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+.service-layer p { font-size: 15px; color: var(--gray-600); line-height: 1.8; }
+.service-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.service-tag {
+  font-size: 12px; color: var(--gray-600);
+  background: var(--gray-50); border: 1px solid var(--gray-100);
+  padding: 4px 12px; border-radius: 4px;
+}
+
+/* Approach */
+.approach { padding: 100px 0; background: var(--gray-50); }
+.approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 900px; margin: 0 auto; }
+.approach-item { text-align: center; padding: 24px; }
+.approach-num {
+  font-size: 32px; font-weight: 800; color: var(--gray-200);
+  margin-bottom: 16px;
+}
+.approach-item h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.approach-item p { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+
+/* Cases */
+.cases { padding: 100px 0; overflow: hidden; }
+.carousel-wrap { position: relative; }
+.carousel-track {
+  display: flex; gap: 24px;
+  overflow: hidden;
+  padding: 0 24px 24px;
+  max-width: 1200px; margin: 0 auto;
+}
+.case-card {
+  flex: 0 0 calc(33.333% - 16px);
+  min-width: 0;
+  border: 1px solid var(--gray-100);
+  border-radius: 12px;
+  padding: 32px;
+  transition: box-shadow 0.2s, opacity 0.4s;
+}
+.case-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+.case-card .case-label {
+  font-size: 11px; font-weight: 700; color: var(--accent);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.case-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 12px; line-height: 1.5; }
+.case-card p { font-size: 14px; color: var(--gray-600); line-height: 1.7; margin-bottom: 16px; }
+.case-results { display: flex; gap: 20px; flex-wrap: wrap; }
+.case-result { font-size: 12px; color: var(--gray-600); }
+.case-result strong {
+  display: block; font-size: 18px; font-weight: 800; color: var(--black);
+  margin-bottom: 2px;
+}
+.carousel-nav {
+  display: flex; justify-content: center; gap: 12px;
+  margin-top: 32px;
+}
+.carousel-nav button {
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid var(--gray-100); background: var(--white);
+  cursor: pointer; font-size: 16px; color: var(--gray-600);
+  transition: all 0.2s;
+}
+.carousel-nav button:hover { border-color: var(--black); color: var(--black); }
+
+/* Profile */
+.profile { padding: 100px 0; background: var(--gray-50); }
+.profile-content { max-width: 640px; margin: 0 auto; }
+.profile-content h3 { font-size: 20px; font-weight: 700; margin-bottom: 16px; }
+.profile-content p { font-size: 15px; color: var(--gray-600); margin-bottom: 16px; line-height: 1.8; }
+
+/* Vision */
+.vision-section {
+  padding: 80px 0;
+  background: var(--gray-900); color: var(--white);
+  text-align: center;
+}
+.vision-section h2 { color: var(--white); font-size: 28px; margin-bottom: 16px; }
+.vision-section p { color: var(--gray-400); font-size: 15px; line-height: 1.8; margin-bottom: 24px; }
+.vision-section a { color: var(--gray-400); font-size: 13px; text-decoration: underline; }
+
+/* Contact */
+.contact {
+  padding: 100px 0;
+  text-align: center;
+}
+.contact h2 { font-size: 28px; font-weight: 700; margin-bottom: 16px; }
+.contact p { font-size: 16px; color: var(--gray-600); margin-bottom: 40px; }
+.contact .cta {
+  display: inline-block;
+  background: var(--black); color: var(--white);
+  padding: 16px 48px; border-radius: 8px;
+  text-decoration: none; font-size: 15px; font-weight: 600;
+  transition: background 0.2s;
+}
+.contact .cta:hover { background: var(--gray-600); }
+
+/* Sticky CTA */
+.sticky-cta {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: rgba(17,17,17,0.95);
+  backdrop-filter: blur(8px);
+  padding: 12px 24px;
+  display: flex; justify-content: center; align-items: center;
+  z-index: 100;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.sticky-cta.visible { transform: translateY(0); }
+.sticky-cta a {
+  background: var(--white); color: var(--black);
+  padding: 10px 32px; border-radius: 6px;
+  text-decoration: none; font-size: 14px; font-weight: 600;
+}
+.sticky-cta span { color: var(--gray-400); font-size: 13px; margin-right: 16px; }
+
+/* Footer */
+footer {
+  padding: 40px 0 80px;
+  text-align: center;
+  font-size: 13px; color: var(--gray-400);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 32px; }
+  .service-layer { flex-direction: column; gap: 16px; }
+  .service-layer .layer-label { flex: none; }
+  .approach-grid { grid-template-columns: 1fr; }
+  .carousel-track { flex-direction: column; }
+  .case-card { flex: none; }
+  nav { display: none; }
+}
+</style>
+</head>
+<body>
+
+<script src="header.js"></script>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="tagline">Your Data-Driven Ally</div>
+    <h1>データで、事業を強くする。</h1>
+    <p>戦略立案から実行支援まで一気通貫でご支援します。<br>代理店でもコンサルでもない。御社の事業成長を、一緒に背負います。</p>
+    <div class="scroll-hint">Scroll Down &darr;</div>
+  </div>
+</section>
+
+<!-- Service -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-label">Service</div>
+    <h2 class="section-title">戦略から実行まで、一気通貫</h2>
+    <p class="section-sub">課題の特定から施策の実行・改善まで、必要なことを全てカバーします。</p>
+    <div class="service-layers">
+      <div class="service-layer">
+        <div class="layer-label">Strategy</div>
+        <div class="layer-content">
+          <h3>戦略立案・現状分析</h3>
+          <p>データで現状を因数分解し、PLを動かすレバーを特定します。事業計画・KPI設計・競合分析・市場調査まで対応いたします。</p>
+          <div class="service-tags">
+            <span class="service-tag">事業戦略</span>
+            <span class="service-tag">PL設計</span>
+            <span class="service-tag">KPI体系構築</span>
+            <span class="service-tag">競合分析</span>
+            <span class="service-tag">市場調査</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-layer">
+        <div class="layer-label">Build</div>
+        <div class="layer-content">
+          <h3>開発・基盤構築</h3>
+          <p>データ基盤からLP・サイト制作まで、戦略を実装するための土台を構築します。</p>
+          <div class="service-tags">
+            <span class="service-tag">BigQuery基盤</span>
+            <span class="service-tag">ダッシュボード</span>
+            <span class="service-tag">LP制作</span>
+            <span class="service-tag">サイト制作</span>
+            <span class="service-tag">API連携</span>
+            <span class="service-tag">業務自動化</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-layer">
+        <div class="layer-label">Operate</div>
+        <div class="layer-content">
+          <h3>運用・改善</h3>
+          <p>特定した課題に対して、最も効く施策を選定し実行します。数字を見ながら高速で改善し続けます。</p>
+          <div class="service-tags">
+            <span class="service-tag">Meta広告</span>
+            <span class="service-tag">Google広告</span>
+            <span class="service-tag">SEO</span>
+            <span class="service-tag">SNS運用</span>
+            <span class="service-tag">CR制作</span>
+            <span class="service-tag">ABテスト</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 40px;"><a href="services.html" style="color: var(--accent); font-size: 14px; text-decoration: none; font-weight: 600;">全サービス一覧を見る &rarr;</a></p>
+  </div>
+</section>
+
+<!-- Approach -->
+<section class="approach">
+  <div class="container">
+    <div class="section-label">Approach</div>
+    <h2 class="section-title">Sakuaが選ばれる理由</h2>
+    <p class="section-sub"></p>
+    <div class="approach-grid">
+      <div class="approach-item">
+        <div class="approach-num">01</div>
+        <h3>全てワンストップで引き受ける</h3>
+        <p>マーケ・開発・データ・デザイン。各領域で国内トップレベルの専門家と連携し、ワンストップで対応します。</p>
+      </div>
+      <div class="approach-item">
+        <div class="approach-num">02</div>
+        <h3>PLから逆算して動く</h3>
+        <p>全ての施策はPLに接続されています。売上を上げるか、コストを下げるか。そのどちらかに集中します。</p>
+      </div>
+      <div class="approach-item">
+        <div class="approach-num">03</div>
+        <h3>御社の課題に合わせる</h3>
+        <p>固定パッケージではなく、お話を伺った上で今一番効くことだけをご提案します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cases -->
+<section class="cases" id="cases">
+  <div class="container">
+    <div class="section-label">Cases</div>
+    <h2 class="section-title">支援実績</h2>
+    <p class="section-sub">一部をご紹介します</p>
+  </div>
+  <div class="carousel-wrap">
+    <div class="carousel-track" id="carouselTrack">
+
+      <div class="case-card">
+        <div class="case-label">人材サービス / 広告運用</div>
+        <h3>月間3億円超のデジタル広告運用</h3>
+        <p>登録者400万人規模の人材サービスにおけるディスプレイ広告のプランニング・運用・改善を担当。</p>
+        <div class="case-results">
+          <div class="case-result"><strong>月間3億円+</strong>広告運用規模</div>
+          <div class="case-result"><strong>400万人</strong>登録者数</div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-label">Webサービス / PdM</div>
+        <h3>登録3,000万人超のプロダクトマネジメント</h3>
+        <p>国内最大級のWebサービスにてPdMを担当。KPI設計・ユーザー行動分析・機能改善を推進。</p>
+        <div class="case-results">
+          <div class="case-result"><strong>3,000万人+</strong>登録ユーザー</div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-label">医療系人材 / 広告・データ基盤</div>
+        <h3>CPA 83%改善、データ基盤をゼロ構築</h3>
+        <p>事業責任者として広告運用・BQデータ基盤構築・ダッシュボード開発を一貫して担当。</p>
+        <div class="case-results">
+          <div class="case-result"><strong>CPA 83%改善</strong>広告効率</div>
+          <div class="case-result"><strong>ARR 1億円</strong>事業規模</div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-label">テレビ効果測定SaaS / データ分析</div>
+        <h3>営業パイプライン分析基盤の構築</h3>
+        <p>セグメント別受注率の分解分析、KPI設計を担当。データに基づく営業戦略の策定を支援。</p>
+        <div class="case-results">
+          <div class="case-result"><strong>受注率分析</strong>セグメント分解</div>
+          <div class="case-result"><strong>KPI設計</strong>営業生産性</div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-label">医療系人材 / セミナー集客</div>
+        <h3>セミナー経由のCVR 40%を実現</h3>
+        <p>専門家向けセミナーの企画・集客導線設計を担当。広告CPAゼロのオーガニック集客チャネルを確立。</p>
+        <div class="case-results">
+          <div class="case-result"><strong>CVR 40%</strong>セミナー経由</div>
+          <div class="case-result"><strong>CPA ¥0</strong>オーガニック</div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-label">不動産売却査定 / 広告運用・CR制作</div>
+        <h3>不動産査定サービスのMeta広告運用</h3>
+        <p>LP設計・ターゲティング・CR制作・CAPI構築・インタレスト設計まで一貫実施。月400本規模のバナーを量産しABテストを高速で回転。</p>
+        <div class="case-results">
+          <div class="case-result"><strong>月400本</strong>バナー制作</div>
+          <div class="case-result"><strong>CAPI構築</strong>CV最適化</div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-label">車買取査定 / CR制作・審査対応</div>
+        <h3>車一括査定のCR量産と広告設計</h3>
+        <p>公式LPからファクトを抽出し、レギュレーション準拠のCRを大量制作。ASP審査対応・ファクトシート管理まで一貫対応。</p>
+        <div class="case-results">
+          <div class="case-result"><strong>CR量産</strong>ABテスト前提</div>
+          <div class="case-result"><strong>CTR改善</strong>ターゲティング最適化</div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-label">SaaS / 事業計画・PL設計</div>
+        <h3>投資家向け事業計画の策定支援</h3>
+        <p>シリーズA〜Bフェーズの事業計画・PL設計・KPI体系の策定を支援。投資家向けプレゼン資料の作成も担当。</p>
+        <div class="case-results">
+          <div class="case-result"><strong>事業計画</strong>PL設計</div>
+          <div class="case-result"><strong>資金調達</strong>プレゼン支援</div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-label">複数業界 / CR大量生産体制</div>
+        <h3>月400本のバナー制作・ABテスト体制</h3>
+        <p>image-2×Claude Codeによる高速CR制作パイプラインを構築。訴求軸の設計からバナー生成・HTML化・入稿まで一気通貫。</p>
+        <div class="case-results">
+          <div class="case-result"><strong>月400本</strong>CR制作能力</div>
+          <div class="case-result"><strong>CTR改善</strong>ABテスト高速回転</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="carousel-nav">
+      <button id="prevBtn">&larr;</button>
+      <button id="nextBtn">&rarr;</button>
+    </div>
+  </div>
+</section>
+
+<!-- Profile -->
+<section class="profile" id="profile">
+  <div class="container">
+    <div class="section-label">About</div>
+    <h2 class="section-title">代表紹介</h2>
+    <p class="section-sub"></p>
+    <div class="profile-content">
+      <h3>木村優斗</h3>
+      <p>慶應義塾大学卒。在学中にフランスESSEC Business Schoolへ留学。</p>
+      <p>新卒でリクルートに入社。プロダクト統括本部にてホットペッパービューティーのPdM、リクルートエージェントのマーケティングを担当。</p>
+      <p>独立後、SaaS・人材・不動産など複数業界で事業責任者を務める。事業計画の策定から開発、マーケティング、営業、データ基盤構築まで一貫して担当。2026年、株式会社Sakuaを設立。</p>
+      <p>著書『ライフログを集めよ』にて、データとAIによる生産性向上の方法論を体系化。法人のデータ基盤構築から個人の意思決定支援まで、「データで強くする」を一貫して実践している。</p>
+    </div>
+  </div>
+</section>
+
+<!-- Vision -->
+<section class="vision-section">
+  <div class="container" style="max-width: 640px;">
+    <h2>日本を強く、豊かにする。</h2>
+    <p>いいモノを作っているのに、届け方が分からなくて売れない。<br>そんな会社を、なくしていきます。</p>
+    <a href="vision.html">Mission / Vision / Values &rarr;</a>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-label">Contact</div>
+    <h2>60分間の無料相談</h2>
+    <p>貴社の課題をヒアリングし、何ができるかをご提案します。</p>
+    <a href="mailto:yuto@sakua.ai" class="cta">無料相談を申し込む</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 株式会社Sakua. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <span>60分間の無料相談</span>
+  <a href="mailto:yuto@sakua.ai">無料相談を申し込む</a>
+</div>
+
+<script>
+// Sticky CTA
+const stickyCta = document.getElementById('stickyCta');
+const hero = document.querySelector('.hero');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > hero.offsetHeight * 0.5) {
+    stickyCta.classList.add('visible');
+  } else {
+    stickyCta.classList.remove('visible');
+  }
+});
+
+// Carousel
+const track = document.getElementById('carouselTrack');
+const cards = track.querySelectorAll('.case-card');
+let currentPage = 0;
+const cardsPerPage = 3;
+const totalPages = Math.ceil(cards.length / cardsPerPage);
+
+function updateCarousel() {
+  cards.forEach((card, i) => {
+    const start = currentPage * cardsPerPage;
+    const end = start + cardsPerPage;
+    if (i >= start && i < end) {
+      card.style.display = 'block';
+      card.style.opacity = '1';
+    } else if (i === end) {
+      card.style.display = 'block';
+      card.style.opacity = '0.3';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+  if (currentPage > 0) { currentPage--; updateCarousel(); }
+});
+document.getElementById('nextBtn').addEventListener('click', () => {
+  if (currentPage < totalPages - 1) { currentPage++; updateCarousel(); }
+});
+updateCarousel();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サービス一覧 | 株式会社Sakua</title>
+<style>
+:root {
+  --black: #111;
+  --white: #fff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-400: #9ca3af;
+  --gray-600: #4b5563;
+  --gray-900: #111827;
+  --accent: #2563eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  color: var(--gray-900); line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+header {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--gray-100);
+  z-index: 100;
+}
+header .container {
+  display: flex; justify-content: space-between; align-items: center;
+  height: 64px;
+}
+.logo { font-size: 20px; font-weight: 700; letter-spacing: 0.05em; color: var(--black); text-decoration: none; }
+nav a {
+  color: var(--gray-600); text-decoration: none; font-size: 14px; font-weight: 500;
+  margin-left: 32px;
+}
+nav a:hover { color: var(--black); }
+
+.hero-services {
+  padding: 140px 0 60px;
+  text-align: center;
+}
+.hero-services h1 { font-size: 32px; font-weight: 800; margin-bottom: 16px; }
+.hero-services p { font-size: 16px; color: var(--gray-600); max-width: 600px; margin: 0 auto; }
+
+.category {
+  padding: 60px 0;
+  border-top: 1px solid var(--gray-100);
+}
+.category .cat-label {
+  font-size: 12px; font-weight: 700; color: var(--accent);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.category h2 { font-size: 24px; font-weight: 800; margin-bottom: 32px; }
+.menu-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+}
+.menu-item {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-100);
+  border-radius: 8px;
+  padding: 20px 24px;
+}
+.menu-item h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+.menu-item p { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+
+.cta-section {
+  padding: 80px 0;
+  background: var(--gray-900);
+  color: var(--white);
+  text-align: center;
+}
+.cta-section h2 { font-size: 24px; font-weight: 700; margin-bottom: 16px; }
+.cta-section p { font-size: 15px; color: var(--gray-400); margin-bottom: 32px; }
+.cta-section a {
+  display: inline-block;
+  background: var(--white); color: var(--black);
+  padding: 12px 36px; border-radius: 8px;
+  text-decoration: none; font-size: 14px; font-weight: 600;
+}
+
+footer {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 13px; color: var(--gray-400);
+}
+
+@media (max-width: 768px) {
+  .menu-grid { grid-template-columns: 1fr; }
+  nav { display: none; }
+}
+</style>
+</head>
+<body>
+
+<script src="header.js"></script>
+
+<section class="hero-services">
+  <div class="container">
+    <h1>サービス一覧</h1>
+    <p>Webに関わること、全部やります。以下は提供可能なメニューの一部です。<br>貴社の課題に合わせて、最適な組み合わせをご提案します。</p>
+  </div>
+</section>
+
+<!-- 広告運用 -->
+<section class="category">
+  <div class="container">
+    <div class="cat-label">Advertising</div>
+    <h2>広告運用</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h3>Meta広告運用</h3>
+        <p>Facebook / Instagram広告の設計・運用・改善。リード獲得からEC売上まで。</p>
+      </div>
+      <div class="menu-item">
+        <h3>Google広告運用</h3>
+        <p>検索・ディスプレイ・P-MAX。キーワード設計からCV最適化まで。</p>
+      </div>
+      <div class="menu-item">
+        <h3>Yahoo広告運用</h3>
+        <p>検索広告・ディスプレイ広告。日本市場特化の運用ノウハウ。</p>
+      </div>
+      <div class="menu-item">
+        <h3>TikTok広告運用</h3>
+        <p>動画CR制作含む。若年層・toC商材に特化した運用。</p>
+      </div>
+      <div class="menu-item">
+        <h3>アフィリエイト広告設計</h3>
+        <p>ASP選定・案件開拓・CR制作・成果トラッキング構築まで一貫対応。</p>
+      </div>
+      <div class="menu-item">
+        <h3>広告クリエイティブ制作</h3>
+        <p>バナー・動画CR・記事LP。ABテスト前提の量産体制。</p>
+      </div>
+      <div class="menu-item">
+        <h3>広告ABテスト設計・運用</h3>
+        <p>CR・ターゲティング・LP別のABテスト設計。勝ちパターンの特定。</p>
+      </div>
+      <div class="menu-item">
+        <h3>CAPI / ピクセル構築</h3>
+        <p>Conversions API・ピクセル設計・イベント設計。正確なCV計測環境を構築。</p>
+      </div>
+      <div class="menu-item">
+        <h3>広告インハウス化支援</h3>
+        <p>運用代行からのインハウス移行。マニュアル作成・トレーニング含む。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LP・Web制作 -->
+<section class="category" style="background: var(--gray-50);">
+  <div class="container">
+    <div class="cat-label">Web Production</div>
+    <h2>LP・Web制作</h2>
+    <div class="menu-grid">
+      <div class="menu-item" style="background: var(--white);">
+        <h3>LP制作</h3>
+        <p>広告用ランディングページの企画・デザイン・コーディング。成果直結の設計。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>記事LP制作</h3>
+        <p>ネイティブ広告向けの記事型LP。ストーリー設計からライティングまで。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>LP ABテスト・改善</h3>
+        <p>ヒートマップ分析・CVRファネル分析に基づくLP継続改善。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>コーポレートサイト制作</h3>
+        <p>企業HP制作。レスポンシブ対応・CMS構築含む。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>サービスサイト制作</h3>
+        <p>SaaS・サービス紹介サイトの設計・制作。CVR最適化込み。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>採用サイト制作</h3>
+        <p>採用特化のWebサイト。求人媒体連携・応募導線設計含む。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO・コンテンツ -->
+<section class="category">
+  <div class="container">
+    <div class="cat-label">SEO & Content</div>
+    <h2>SEO・コンテンツマーケティング</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h3>SEO戦略設計</h3>
+        <p>キーワード調査・サイト構造設計・コンテンツ戦略の立案。</p>
+      </div>
+      <div class="menu-item">
+        <h3>SEO記事制作</h3>
+        <p>検索上位を狙う記事の企画・執筆・入稿。専門ライター起用可。</p>
+      </div>
+      <div class="menu-item">
+        <h3>テクニカルSEO</h3>
+        <p>サイト速度改善・構造化データ・内部リンク最適化・Core Web Vitals対応。</p>
+      </div>
+      <div class="menu-item">
+        <h3>オウンドメディア構築・運用</h3>
+        <p>メディア設計から記事制作・分析・改善まで一貫運用。</p>
+      </div>
+      <div class="menu-item">
+        <h3>LLM最適化（LLMO）</h3>
+        <p>ChatGPT・Perplexity等のAI検索で自社が表示されるための対策。</p>
+      </div>
+      <div class="menu-item">
+        <h3>ホワイトペーパー制作</h3>
+        <p>リード獲得用の資料制作。企画・ライティング・デザインまで。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SNS -->
+<section class="category" style="background: var(--gray-50);">
+  <div class="container">
+    <div class="cat-label">SNS</div>
+    <h2>SNS運用・発信支援</h2>
+    <div class="menu-grid">
+      <div class="menu-item" style="background: var(--white);">
+        <h3>X（Twitter）運用</h3>
+        <p>企業アカウントの戦略設計・投稿制作・分析レポート。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>Instagram運用</h3>
+        <p>フィード・ストーリーズ・リール制作。フォロワー獲得戦略込み。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>note運用</h3>
+        <p>ブランド発信・採用広報・ソートリーダーシップ記事の制作。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>YouTube運用</h3>
+        <p>企画・撮影ディレクション・編集・サムネイル・SEO対策。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>LINE公式アカウント構築</h3>
+        <p>リッチメニュー設計・ステップ配信・セグメント配信設計。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>Podcast制作支援</h3>
+        <p>企画・収録・編集・配信設定・切り抜き動画制作。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- データ基盤・開発 -->
+<section class="category">
+  <div class="container">
+    <div class="cat-label">Data & Development</div>
+    <h2>データ基盤構築・開発</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h3>BigQueryデータ基盤構築</h3>
+        <p>社内データをBigQueryに一元化。広告・CRM・営業データの統合。</p>
+      </div>
+      <div class="menu-item">
+        <h3>ETLパイプライン構築</h3>
+        <p>データソース間の自動連携。スケジューリング・エラー監視込み。</p>
+      </div>
+      <div class="menu-item">
+        <h3>Looker Studioダッシュボード</h3>
+        <p>経営KPI・広告パフォーマンス・営業実績の可視化ダッシュボード構築。</p>
+      </div>
+      <div class="menu-item">
+        <h3>API開発・連携</h3>
+        <p>外部サービスとのAPI連携開発。データ自動取得・自動配信。</p>
+      </div>
+      <div class="menu-item">
+        <h3>業務自動化（RPA / スクリプト）</h3>
+        <p>レポート自動生成・データ収集自動化・通知自動化。</p>
+      </div>
+      <div class="menu-item">
+        <h3>AIエージェント構築</h3>
+        <p>社内データを参照するAIアシスタントの構築。意思決定支援。</p>
+      </div>
+      <div class="menu-item">
+        <h3>CRM / MA導入支援</h3>
+        <p>HubSpot・Salesforce等の導入・設定・データ移行・運用設計。</p>
+      </div>
+      <div class="menu-item">
+        <h3>GA4 / GTM設計・導入</h3>
+        <p>Google Analytics 4・タグマネージャーの設計・実装・イベント設計。</p>
+      </div>
+      <div class="menu-item">
+        <h3>ファーストパーティデータ戦略</h3>
+        <p>Cookie規制後を見据えた自社データ資産の構築戦略。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 戦略・コンサル -->
+<section class="category" style="background: var(--gray-50);">
+  <div class="container">
+    <div class="cat-label">Strategy & Consulting</div>
+    <h2>戦略・コンサルティング</h2>
+    <div class="menu-grid">
+      <div class="menu-item" style="background: var(--white);">
+        <h3>マーケティング戦略立案</h3>
+        <p>市場分析・競合分析・ポジショニング設計。PLに接続された戦略。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>事業計画・PL設計</h3>
+        <p>売上計画・コスト構造設計・KPI体系の策定。投資家向け資料含む。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>営業プロセス改善</h3>
+        <p>受注率分析・パイプライン管理・セグメント別戦略設計。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>価格設計・プライシング</h3>
+        <p>最適価格の設計。顧客セグメント別の価格戦略。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>toB マーケティング支援</h3>
+        <p>リード獲得・ナーチャリング・インサイドセールス設計。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>toC マーケティング支援</h3>
+        <p>ユーザー獲得・CRM・LTV最大化。アプリ・EC・サービス対応。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>市場調査・TAM/SAM/SOM</h3>
+        <p>e-Stat API等を活用した定量的な市場規模推定。新規事業の可否判断。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>競合分析</h3>
+        <p>広告ライブラリ・SimilarWeb等を使った競合のマーケティング分析。</p>
+      </div>
+      <div class="menu-item" style="background: var(--white);">
+        <h3>AI活用コンサルティング</h3>
+        <p>業務へのAI導入支援。Claude Code・ChatGPT・自動化ツールの活用設計。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 業界別 -->
+<section class="category">
+  <div class="container">
+    <div class="cat-label">Industry</div>
+    <h2>業界別支援</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h3>人材業界</h3>
+        <p>求職者獲得・求人媒体運用・採用マーケティング。歯科・医療人材に特に強み。</p>
+      </div>
+      <div class="menu-item">
+        <h3>不動産業界</h3>
+        <p>売却査定リード獲得・物件LP制作・ポータルサイト連携。</p>
+      </div>
+      <div class="menu-item">
+        <h3>医療・クリニック</h3>
+        <p>集患・予約システム連携・MEO対策・口コミ管理。</p>
+      </div>
+      <div class="menu-item">
+        <h3>SaaS</h3>
+        <p>リード獲得・フリートライアル最適化・チャーンレート改善。</p>
+      </div>
+      <div class="menu-item">
+        <h3>EC・D2C</h3>
+        <p>商品LP・広告運用・CRM・LTV最大化。Shopify対応可。</p>
+      </div>
+      <div class="menu-item">
+        <h3>教育・スクール</h3>
+        <p>セミナー集客・受講者獲得・コンテンツマーケティング。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>60分間の無料相談</h2>
+    <p>どのサービスが最適か、まずはお話を聞かせてください。<br>全ての施策をPLに接続し、売上と利益にコミットします。</p>
+    <a href="mailto:yuto@sakua.ai">無料相談を申し込む</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 株式会社Sakua. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

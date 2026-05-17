@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mission / Vision / Values | 株式会社Sakua</title>
+<style>
+:root {
+  --black: #111;
+  --white: #fff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-400: #9ca3af;
+  --gray-600: #4b5563;
+  --gray-900: #111827;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  color: var(--gray-900); line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+header {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--gray-100);
+  z-index: 100;
+}
+header .container {
+  display: flex; justify-content: space-between; align-items: center;
+  height: 64px; max-width: 1080px;
+}
+.logo { font-size: 20px; font-weight: 700; letter-spacing: 0.05em; color: var(--black); text-decoration: none; }
+nav a {
+  color: var(--gray-600); text-decoration: none; font-size: 14px; font-weight: 500;
+  margin-left: 32px;
+}
+nav a:hover { color: var(--black); }
+
+.hero-mvv {
+  padding: 160px 0 80px;
+  text-align: center;
+}
+.hero-mvv h1 {
+  font-size: 36px; font-weight: 800; line-height: 1.3;
+  margin-bottom: 16px;
+}
+.hero-mvv p {
+  font-size: 16px; color: var(--gray-600);
+}
+
+.mvv-section {
+  padding: 80px 0;
+  border-top: 1px solid var(--gray-100);
+}
+.mvv-section .label {
+  font-size: 12px; font-weight: 700; color: var(--gray-400);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.mvv-section h2 {
+  font-size: 28px; font-weight: 800; margin-bottom: 24px;
+  line-height: 1.4;
+}
+.mvv-section p {
+  font-size: 16px; color: var(--gray-600); line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.values-list {
+  list-style: none; margin-top: 32px;
+}
+.values-list li {
+  padding: 24px 0;
+  border-top: 1px solid var(--gray-100);
+}
+.values-list li h3 {
+  font-size: 18px; font-weight: 700; margin-bottom: 8px;
+}
+.values-list li p {
+  font-size: 15px; color: var(--gray-600); margin-bottom: 0;
+}
+
+.back-link {
+  text-align: center; padding: 60px 0;
+}
+.back-link a {
+  color: var(--gray-600); font-size: 14px; text-decoration: underline;
+}
+
+footer {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 13px; color: var(--gray-400);
+}
+
+@media (max-width: 768px) {
+  .hero-mvv h1 { font-size: 28px; }
+  nav { display: none; }
+}
+</style>
+</head>
+<body>
+
+<script src="header.js"></script>
+
+<section class="hero-mvv">
+  <div class="container">
+    <h1>日本を強く、豊かにする。</h1>
+    <p>株式会社Sakuaが目指す世界と、大切にしている考え方。</p>
+  </div>
+</section>
+
+<section class="mvv-section">
+  <div class="container">
+    <div class="label">Mission</div>
+    <h2>一人当たりの生産性を、<br>圧倒的に引き上げる。</h2>
+    <p>日本には、素晴らしいプロダクトや技術を持っているのに、伝えられなくて売れない企業がたくさんあります。</p>
+    <p>問題は能力ではなく、それを届ける仕組みがないことです。データ基盤がなく、マーケティングが回っておらず、一人ひとりの力が売上に転換されていません。</p>
+    <p>私たちは、データとマーケティングと開発の力で、一人当たりの生産性を圧倒的に引き上げます。それが、企業を強くし、日本を強くする最短の道だと信じています。</p>
+  </div>
+</section>
+
+<section class="mvv-section">
+  <div class="container">
+    <div class="label">Vision</div>
+    <h2>能力の差を、<br>経済力の差から切り離す。</h2>
+    <p>優秀なのに環境に恵まれない方がいます。技術はあるのに売り方を知らない会社があります。</p>
+    <p>テクノロジーの力で、個人と企業の生産性を100倍にできる時代が来ています。その力を正しく届けることで、能力があれば誰でも経済的に報われる世界を作りたいと考えています。</p>
+    <p>それが、私たちが目指す世界です。</p>
+  </div>
+</section>
+
+<section class="mvv-section">
+  <div class="container">
+    <div class="label">Values</div>
+    <h2>大切にしている考え方</h2>
+    <ul class="values-list">
+      <li>
+        <h3>全ての施策をPLに接続する</h3>
+        <p>どんな施策もPLに接続されていなければ意味がありません。全て数字で振り返ります。売上を圧倒的に上げるか、コストを圧倒的に下げるか。そのどちらかに集中します。</p>
+      </li>
+      <li>
+        <h3>お客様のことを、限界まで考え抜く</h3>
+        <p>業界構造、競合、顧客の顧客、PLの中身、現場のオペレーション。解像度が上がるまで調べて、聞いて、考え抜きます。そこまでやるからこそ、刺さる施策が見つかります。</p>
+      </li>
+      <li>
+        <h3>必要なことは全部やる</h3>
+        <p>「それはうちの範囲外です」とは言いません。広告もLPもデータ基盤もSEOも開発も、課題を解決するために必要なら全部やります。</p>
+      </li>
+      <li>
+        <h3>データで語る</h3>
+        <p>感覚や経験則ではなく、データに基づいて意思決定します。全てのデータを一元化し、ファクトで会話する文化をクライアントにも届けます。</p>
+      </li>
+      <li>
+        <h3>生データは代替不可能</h3>
+        <p>加工や分析のレイヤーは代替されえます。しかし生のデータは代替できません。お客様のファーストパーティデータを、最も価値ある資産としてお守りし、活かします。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="back-link">
+  <a href="index.html">&larr; トップページに戻る</a>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 株式会社Sakua. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
